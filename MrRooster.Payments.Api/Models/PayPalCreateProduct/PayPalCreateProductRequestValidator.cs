@@ -1,6 +1,6 @@
 ﻿using FluentValidation;
 
-namespace MrRooster.Payments.Api.Models
+namespace MrRooster.Payments.Api.Models.PayPalCreateProduct
 {
     public class PayPalCreateProductRequestValidator : AbstractValidator<PayPalCreateProductRequest>
     {

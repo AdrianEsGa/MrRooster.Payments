@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using MrRooster.Payments.Infrastructure.ServiceClients.PayPal;
 
-namespace MrRooster.Payments.Api.Models
+namespace MrRooster.Payments.Api.Models.PayPalCreateProduct
 {
     public class PayPalCreateProductMappingProfile : Profile
     {

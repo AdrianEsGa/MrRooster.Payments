@@ -4,11 +4,11 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Routing;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using MrRooster.Payments.Api.Models;
 using MrRooster.Payments.Application.Commands.PayPal;
 using System;
 using MediatR;
 using MrRooster.Payments.Api.Configuration.Extensions;
+using MrRooster.Payments.Api.Models.PayPalCreateProduct;
 
 namespace MrRooster.Payments.Api.Infrastructure
 {

@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using MrRooster.Payments.Api.Models;
+using MrRooster.Payments.Api.Models.PayPalCreateProduct;
 using MrRooster.Payments.Application.Commands.PayPal;
 using Swashbuckle.AspNetCore.Annotations;
 using System.Threading.Tasks;

@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using MrRooster.Payments.Api.Models;
+using MrRooster.Payments.Api.Models.PayPalCreateProduct;
 using MrRooster.Payments.Infrastructure.Abstractions;
 using MrRooster.Payments.Infrastructure.ServiceClients.PayPal;
 using System;

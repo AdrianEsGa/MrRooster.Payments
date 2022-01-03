@@ -1,7 +1,7 @@
 ﻿using System.Text.Json.Serialization;
 
 
-namespace MrRooster.Payments.Api.Models
+namespace MrRooster.Payments.Api.Models.PayPalCreateProduct
 {
     public class PayPalCreateProductRequest
     {
