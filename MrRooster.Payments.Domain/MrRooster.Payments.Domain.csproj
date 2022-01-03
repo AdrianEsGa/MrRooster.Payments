@@ -5,8 +5,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Abstractions\" />
-    <Folder Include="Models\" />
+    <Compile Remove="Abstractions\**" />
+    <Compile Remove="Models\**" />
+    <EmbeddedResource Remove="Abstractions\**" />
+    <EmbeddedResource Remove="Models\**" />
+    <None Remove="Abstractions\**" />
+    <None Remove="Models\**" />
   </ItemGroup>
 
 </Project>

@@ -5,12 +5,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MrRooster.Payments.Domain\MrRooster.Payments.Domain.csproj" />
-    <ProjectReference Include="..\MrRooster.Payments.Infrastructure\MrRooster.Payments.Infrastructure.csproj" />
+    <Compile Remove="Queries\**" />
+    <EmbeddedResource Remove="Queries\**" />
+    <None Remove="Queries\**" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Queries\" />
+    <ProjectReference Include="..\MrRooster.Payments.Domain\MrRooster.Payments.Domain.csproj" />
+    <ProjectReference Include="..\MrRooster.Payments.Infrastructure\MrRooster.Payments.Infrastructure.csproj" />
   </ItemGroup>
 
   <ItemGroup>

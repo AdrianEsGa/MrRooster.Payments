@@ -5,7 +5,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="HealthChecks\" />
+    <Compile Remove="HealthChecks\**" />
+    <EmbeddedResource Remove="HealthChecks\**" />
+    <None Remove="HealthChecks\**" />
   </ItemGroup>
 
   <ItemGroup>
