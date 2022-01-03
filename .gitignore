@@ -1,0 +1,10 @@
+
+MrRooster.Payments.Api/obj/
+
+MrRooster.Payments.Infrastructure/obj/
+
+.vs/
+
+MrRooster.Payments.Application/obj/
+
+MrRooster.Payments.Host/obj/
