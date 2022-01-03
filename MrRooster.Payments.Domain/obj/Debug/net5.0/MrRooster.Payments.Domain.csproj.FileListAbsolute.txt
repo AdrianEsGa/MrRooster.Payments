@@ -13,7 +13,6 @@ C:\Personal\MrRooster\MrRooster.Payments\MrRooster.Payments.Domain\bin\Debug\net
 C:\Personal\MrRooster\MrRooster.Payments\MrRooster.Payments.Domain\bin\Debug\net5.0\MrRooster.Payments.Domain.dll
 C:\Personal\MrRooster\MrRooster.Payments\MrRooster.Payments.Domain\bin\Debug\net5.0\ref\MrRooster.Payments.Domain.dll
 C:\Personal\MrRooster\MrRooster.Payments\MrRooster.Payments.Domain\bin\Debug\net5.0\MrRooster.Payments.Domain.pdb
-C:\Personal\MrRooster\MrRooster.Payments\MrRooster.Payments.Domain\obj\Debug\net5.0\MrRooster.Payments.Domain.csproj.AssemblyReference.cache
 C:\Personal\MrRooster\MrRooster.Payments\MrRooster.Payments.Domain\obj\Debug\net5.0\MrRooster.Payments.Domain.GeneratedMSBuildEditorConfig.editorconfig
 C:\Personal\MrRooster\MrRooster.Payments\MrRooster.Payments.Domain\obj\Debug\net5.0\MrRooster.Payments.Domain.AssemblyInfoInputs.cache
 C:\Personal\MrRooster\MrRooster.Payments\MrRooster.Payments.Domain\obj\Debug\net5.0\MrRooster.Payments.Domain.AssemblyInfo.cs
