@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "MrRooster.Payments.Application/1.0.0": {
+        "dependencies": {
+          "MrRooster.Payments.Domain": "1.0.0"
+        },
+        "runtime": {
+          "MrRooster.Payments.Application.dll": {}
+        }
+      },
+      "MrRooster.Payments.Domain/1.0.0": {
+        "runtime": {
+          "MrRooster.Payments.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "MrRooster.Payments.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MrRooster.Payments.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "f075cec2-2edb-4bfa-856b-a4030a34ff8f": {
+      "ProjectGuid": "f075cec2-2edb-4bfa-856b-a4030a34ff8f",
+      "DisplayName": "MrRooster.Payments.Host",
+      "ColorIndex": 0
+    },
+    "16093c6d-fac5-45ff-a15f-4ec9b42a7119": {
+      "ProjectGuid": "16093c6d-fac5-45ff-a15f-4ec9b42a7119",
+      "DisplayName": "MrRooster.Payments.Api",
+      "ColorIndex": 1
+    },
+    "0af02c4f-5728-4cdd-8606-af7e612bc1f1": {
+      "ProjectGuid": "0af02c4f-5728-4cdd-8606-af7e612bc1f1",
+      "DisplayName": "MrRooster.Payments.Application",
+      "ColorIndex": 2
+    },
+    "5fe854bc-2ef0-43f6-bc44-e098957797e4": {
+      "ProjectGuid": "5fe854bc-2ef0-43f6-bc44-e098957797e4",
+      "DisplayName": "MrRooster.Payments.Domain",
+      "ColorIndex": 3
+    },
+    "2b55146d-6524-497f-ae6c-7658710835ae": {
+      "ProjectGuid": "2b55146d-6524-497f-ae6c-7658710835ae",
+      "DisplayName": "MrRooster.Payments.Infrastructure",
+      "ColorIndex": 4
+    },
+    "61429828-c3ac-44da-b642-b90ac8285b78": {
+      "ProjectGuid": "61429828-c3ac-44da-b642-b90ac8285b78",
+      "DisplayName": "WebApplication1",
+      "ColorIndex": 5
+    },
+    "e460aa8d-8e7d-48d4-95a8-7e84ba5c09b7": {
+      "ProjectGuid": "e460aa8d-8e7d-48d4-95a8-7e84ba5c09b7",
+      "DisplayName": "WebApplication2",
+      "ColorIndex": 6
+    },
+    "28f7e09b-d33a-4b54-afca-cd750f9714e2": {
+      "ProjectGuid": "28f7e09b-d33a-4b54-afca-cd750f9714e2",
+      "DisplayName": "WebApplication3",
+      "ColorIndex": 7
+    },
+    "b5b83a0b-4ce9-4ce5-ad84-dc517a4a580d": {
+      "ProjectGuid": "b5b83a0b-4ce9-4ce5-ad84-dc517a4a580d",
+      "DisplayName": "WebApplication4",
+      "ColorIndex": 8
+    },
+    "aa0cbc28-57e0-4d7f-9247-e2db259b1b0f": {
+      "ProjectGuid": "aa0cbc28-57e0-4d7f-9247-e2db259b1b0f",
+      "DisplayName": "MrRooster.Payments.Host",
+      "ColorIndex": 9
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    },
+    "60050050-3817-4c01-9b86-ea8aae3141ca": {
+      "ProjectGuid": "60050050-3817-4c01-9b86-ea8aae3141ca",
+      "DisplayName": "MrRooster.Payments.Application",
+      "ColorIndex": 10
+    },
+    "28b7ed4e-d481-40b3-b958-cd758f44ac9d": {
+      "ProjectGuid": "28b7ed4e-d481-40b3-b958-cd758f44ac9d",
+      "DisplayName": "MrRooster.Payments.Domain",
+      "ColorIndex": 11
+    },
+    "195825e2-1248-4218-9442-6407c91cfa48": {
+      "ProjectGuid": "195825e2-1248-4218-9442-6407c91cfa48",
+      "DisplayName": "MrRooster.Payments.Infrastructure",
+      "ColorIndex": 12
+    }
+  },
+  "NextColorIndex": 13
+}

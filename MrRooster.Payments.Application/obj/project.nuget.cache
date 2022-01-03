@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "vCsQtL/dg1kCMSJycjp2gNBdi0Lvh2RxPxJd8vfjMuNRelmITmDlWmxEkfYnT4vAPjCsfsw2OfcZm+dlA2GGLw==",
+  "success": true,
+  "projectFilePath": "C:\\Personal\\MrRooster\\MrRooster.Payments\\MrRooster.Payments.Application\\MrRooster.Payments.Application.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Nunegal\\.nuget\\packages\\mediatr\\9.0.0\\mediatr.9.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
