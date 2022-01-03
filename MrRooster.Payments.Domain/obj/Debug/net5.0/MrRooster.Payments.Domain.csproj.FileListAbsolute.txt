@@ -9,14 +9,3 @@ C:\Personal\MrRooster.Payments\MrRooster.Payments.Domain\obj\Debug\net5.0\MrRoos
 C:\Personal\MrRooster.Payments\MrRooster.Payments.Domain\obj\Debug\net5.0\MrRooster.Payments.Domain.dll
 C:\Personal\MrRooster.Payments\MrRooster.Payments.Domain\obj\Debug\net5.0\ref\MrRooster.Payments.Domain.dll
 C:\Personal\MrRooster.Payments\MrRooster.Payments.Domain\obj\Debug\net5.0\MrRooster.Payments.Domain.pdb
-C:\Personal\MrRooster\MrRooster.Payments\MrRooster.Payments.Domain\bin\Debug\net5.0\MrRooster.Payments.Domain.deps.json
-C:\Personal\MrRooster\MrRooster.Payments\MrRooster.Payments.Domain\bin\Debug\net5.0\MrRooster.Payments.Domain.dll
-C:\Personal\MrRooster\MrRooster.Payments\MrRooster.Payments.Domain\bin\Debug\net5.0\ref\MrRooster.Payments.Domain.dll
-C:\Personal\MrRooster\MrRooster.Payments\MrRooster.Payments.Domain\bin\Debug\net5.0\MrRooster.Payments.Domain.pdb
-C:\Personal\MrRooster\MrRooster.Payments\MrRooster.Payments.Domain\obj\Debug\net5.0\MrRooster.Payments.Domain.GeneratedMSBuildEditorConfig.editorconfig
-C:\Personal\MrRooster\MrRooster.Payments\MrRooster.Payments.Domain\obj\Debug\net5.0\MrRooster.Payments.Domain.AssemblyInfoInputs.cache
-C:\Personal\MrRooster\MrRooster.Payments\MrRooster.Payments.Domain\obj\Debug\net5.0\MrRooster.Payments.Domain.AssemblyInfo.cs
-C:\Personal\MrRooster\MrRooster.Payments\MrRooster.Payments.Domain\obj\Debug\net5.0\MrRooster.Payments.Domain.csproj.CoreCompileInputs.cache
-C:\Personal\MrRooster\MrRooster.Payments\MrRooster.Payments.Domain\obj\Debug\net5.0\MrRooster.Payments.Domain.dll
-C:\Personal\MrRooster\MrRooster.Payments\MrRooster.Payments.Domain\obj\Debug\net5.0\ref\MrRooster.Payments.Domain.dll
-C:\Personal\MrRooster\MrRooster.Payments\MrRooster.Payments.Domain\obj\Debug\net5.0\MrRooster.Payments.Domain.pdb
