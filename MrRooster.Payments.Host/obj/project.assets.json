@@ -4459,11 +4459,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Personal\\MrRooster\\MrRooster.Payments\\MrRooster.Payments.Host\\MrRooster.Payments.Host.csproj",
+      "projectUniqueName": "C:\\Personal\\MrRooster\\src\\MrRooster.Payments\\MrRooster.Payments.Host\\MrRooster.Payments.Host.csproj",
       "projectName": "MrRooster.Payments.Host",
-      "projectPath": "C:\\Personal\\MrRooster\\MrRooster.Payments\\MrRooster.Payments.Host\\MrRooster.Payments.Host.csproj",
+      "projectPath": "C:\\Personal\\MrRooster\\src\\MrRooster.Payments\\MrRooster.Payments.Host\\MrRooster.Payments.Host.csproj",
       "packagesPath": "C:\\Users\\Nunegal\\.nuget\\packages\\",
-      "outputPath": "C:\\Personal\\MrRooster\\MrRooster.Payments\\MrRooster.Payments.Host\\obj\\",
+      "outputPath": "C:\\Personal\\MrRooster\\src\\MrRooster.Payments\\MrRooster.Payments.Host\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -4483,8 +4483,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Personal\\MrRooster\\MrRooster.Payments\\MrRooster.Payments.Api\\MrRooster.Payments.Api.csproj": {
-              "projectPath": "C:\\Personal\\MrRooster\\MrRooster.Payments\\MrRooster.Payments.Api\\MrRooster.Payments.Api.csproj"
+            "C:\\Personal\\MrRooster\\src\\MrRooster.Payments\\MrRooster.Payments.Api\\MrRooster.Payments.Api.csproj": {
+              "projectPath": "C:\\Personal\\MrRooster\\src\\MrRooster.Payments\\MrRooster.Payments.Api\\MrRooster.Payments.Api.csproj"
             }
           }
         }

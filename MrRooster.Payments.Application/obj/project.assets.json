@@ -80,11 +80,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Personal\\MrRooster\\MrRooster.Payments\\MrRooster.Payments.Application\\MrRooster.Payments.Application.csproj",
+      "projectUniqueName": "C:\\Personal\\MrRooster\\src\\MrRooster.Payments\\MrRooster.Payments.Application\\MrRooster.Payments.Application.csproj",
       "projectName": "MrRooster.Payments.Application",
-      "projectPath": "C:\\Personal\\MrRooster\\MrRooster.Payments\\MrRooster.Payments.Application\\MrRooster.Payments.Application.csproj",
+      "projectPath": "C:\\Personal\\MrRooster\\src\\MrRooster.Payments\\MrRooster.Payments.Application\\MrRooster.Payments.Application.csproj",
       "packagesPath": "C:\\Users\\Nunegal\\.nuget\\packages\\",
-      "outputPath": "C:\\Personal\\MrRooster\\MrRooster.Payments\\MrRooster.Payments.Application\\obj\\",
+      "outputPath": "C:\\Personal\\MrRooster\\src\\MrRooster.Payments\\MrRooster.Payments.Application\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -104,11 +104,11 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Personal\\MrRooster\\MrRooster.Payments\\MrRooster.Payments.Domain\\MrRooster.Payments.Domain.csproj": {
-              "projectPath": "C:\\Personal\\MrRooster\\MrRooster.Payments\\MrRooster.Payments.Domain\\MrRooster.Payments.Domain.csproj"
+            "C:\\Personal\\MrRooster\\src\\MrRooster.Payments\\MrRooster.Payments.Domain\\MrRooster.Payments.Domain.csproj": {
+              "projectPath": "C:\\Personal\\MrRooster\\src\\MrRooster.Payments\\MrRooster.Payments.Domain\\MrRooster.Payments.Domain.csproj"
             },
-            "C:\\Personal\\MrRooster\\MrRooster.Payments\\MrRooster.Payments.Infrastructure\\MrRooster.Payments.Infrastructure.csproj": {
-              "projectPath": "C:\\Personal\\MrRooster\\MrRooster.Payments\\MrRooster.Payments.Infrastructure\\MrRooster.Payments.Infrastructure.csproj"
+            "C:\\Personal\\MrRooster\\src\\MrRooster.Payments\\MrRooster.Payments.Infrastructure\\MrRooster.Payments.Infrastructure.csproj": {
+              "projectPath": "C:\\Personal\\MrRooster\\src\\MrRooster.Payments\\MrRooster.Payments.Infrastructure\\MrRooster.Payments.Infrastructure.csproj"
             }
           }
         }

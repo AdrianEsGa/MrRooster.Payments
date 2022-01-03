@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Personal\\MrRooster\\MrRooster.Payments\\MrRooster.Payments.Domain\\MrRooster.Payments.Domain.csproj",
+      "projectUniqueName": "C:\\Personal\\MrRooster\\src\\MrRooster.Payments\\MrRooster.Payments.Domain\\MrRooster.Payments.Domain.csproj",
       "projectName": "MrRooster.Payments.Domain",
-      "projectPath": "C:\\Personal\\MrRooster\\MrRooster.Payments\\MrRooster.Payments.Domain\\MrRooster.Payments.Domain.csproj",
+      "projectPath": "C:\\Personal\\MrRooster\\src\\MrRooster.Payments\\MrRooster.Payments.Domain\\MrRooster.Payments.Domain.csproj",
       "packagesPath": "C:\\Users\\Nunegal\\.nuget\\packages\\",
-      "outputPath": "C:\\Personal\\MrRooster\\MrRooster.Payments\\MrRooster.Payments.Domain\\obj\\",
+      "outputPath": "C:\\Personal\\MrRooster\\src\\MrRooster.Payments\\MrRooster.Payments.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
