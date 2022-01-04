@@ -7,9 +7,8 @@ namespace MrRooster.Payments.Api.Features.PayPalCreateProduct
     {
 
         [Required]
-        public string Name;
-
-        public string Description;
+        public string Name { get; set; }
+        public string Description { get; set; }
 
     }
 }

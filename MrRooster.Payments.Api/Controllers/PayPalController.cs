@@ -2,7 +2,9 @@
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using MrRooster.Payments.Api.Features.PayPalCreateProduct;
+using MrRooster.Payments.Api.Features.PayPalGetProduct;
 using MrRooster.Payments.Application.Commands.PayPal;
+using MrRooster.Payments.Application.Queries.PayPal;
 using Swashbuckle.AspNetCore.Annotations;
 using System.Threading.Tasks;
 
@@ -39,6 +41,19 @@ namespace MrRooster.Payments.Api.Controllers
             return Ok(response);
         }
 
+        /// <summary>
+        /// Get a PayPal product
+        /// </summary>
+        /// <param name="request"></param>
+        /// <returns></returns>
+        [HttpPost("/paypal/products/{ProductId}")]
+        public async Task<ActionResult<PayPalGetProductResponse>> GetProduct([FromRoute] PayPalGetProductRequest request)
+        {
+            var command = Mapper.Map<PayPalGetProductQuery>(request);
+            var result = await Mediator.Send(command);
+            var response = Mapper.Map<PayPalGetProductResponse>(result);
+            return Ok(response);
+        }
     }
 
 }

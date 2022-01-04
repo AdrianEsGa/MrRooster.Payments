@@ -2,11 +2,8 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using System;
-using System.IO;
-using System.Reflection;
 
 namespace MrRooster.Payments.Host
 {
@@ -57,6 +54,7 @@ namespace MrRooster.Payments.Host
                             Url = new Uri("https://example.com/license")
                         }
                     });
+
                 });
         }
 
@@ -71,11 +69,15 @@ namespace MrRooster.Payments.Host
                      .UseAuthentication()
                     ;
 
-            if (env.IsDevelopment())
+            app.UseSwagger(options =>
             {
-                app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "MrRooster.Payments v1"));
-            }
+                options.SerializeAsV2 = true;
+            });
+
+            app.UseSwaggerUI(options =>
+            {
+                options.SwaggerEndpoint("/swagger/v1/swagger.json", "MrRooster.Payments v1");
+            });
 
             Api.Infrastructure.Configuration.Configure(app, env, configureHost);
         }

@@ -9,6 +9,7 @@ namespace MrRooster.Payments.Infrastructure.ServiceClients.PayPal
     {
         public static string GET_TOKEN = "v1/oauth2/token";
         public static string CREATE_PRODUCT = "v1/catalogs/products";
+        public static string GET_PRODUCT = "v1/catalogs/products/";
     }
 
     public class PayPalProduct
@@ -43,8 +44,6 @@ namespace MrRooster.Payments.Infrastructure.ServiceClients.PayPal
         [JsonProperty("links")]
         public List<PayPalLink> Links;
     }
-
-
 
     public class PayPalOAuth
     {

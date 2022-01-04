@@ -2,6 +2,7 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using MrRooster.Payments.Api.Features.PayPalCreateProduct;
+using MrRooster.Payments.Api.Features.PayPalGetProduct;
 using MrRooster.Payments.Infrastructure.Abstractions;
 using MrRooster.Payments.Infrastructure.ServiceClients.PayPal;
 using System;
@@ -16,6 +17,7 @@ namespace MrRooster.Payments.Api.Configuration.Extensions
             .AddSingleton(provider => new MapperConfiguration(cfg =>
             {
                 cfg.AddProfile(new PayPalCreateProductMappingProfile());
+                cfg.AddProfile(new PayPalGetProductMappingProfile());
 
             }).CreateMapper());
 

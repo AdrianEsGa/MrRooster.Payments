@@ -52,6 +52,26 @@ namespace MrRooster.Payments.Infrastructure.ServiceClients.PayPal
             }
         }
 
+        public async Task<PayPalProduct> GetProduct(string productId)
+        {
+            var oauth = await GetOAuth();
+            var path = _httpClient.BaseAddress + PayPalEndpoints.GET_PRODUCT + productId;
+
+            _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue(oauth.TokenType, oauth.AccessToken);
+
+            var response = await _httpClient.GetAsync(path);
+
+            if (response.IsSuccessStatusCode)
+            {
+                var json = response.Content.ReadAsStringAsync().Result;
+                return JsonConvert.DeserializeObject<PayPalProduct>(json);
+            }
+            else
+            {
+                throw new Exception();
+            }
+        }
+
         private async Task<PayPalOAuth> GetOAuth()
         {
             var path = string.Concat(_httpClient.BaseAddress, PayPalEndpoints.GET_TOKEN);
