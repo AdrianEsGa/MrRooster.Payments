@@ -28,10 +28,8 @@ namespace MrRooster.Payments.Api.Controllers
         /// <summary>
         /// Create a PayPal product
         /// </summary>
-        /// <remarks>
-        /// Create a PayPal product
-        /// </remarks>
-        /// <param name="product">ID of the example</param>
+        /// <param name="request"></param>
+        /// <returns></returns>
         [HttpPost("/paypal/products")]
         public async Task<ActionResult<PayPalCreateProductResponse>> CreateProduct([FromBody] PayPalCreateProductRequest request)
         {

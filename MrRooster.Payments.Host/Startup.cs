@@ -5,6 +5,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using System;
+using System.IO;
+using System.Reflection;
 
 namespace MrRooster.Payments.Host
 {
@@ -36,9 +38,25 @@ namespace MrRooster.Payments.Host
                                 .AllowAnyOrigin();
                         });
                 })               
-                .AddSwaggerGen(c =>
+                .AddSwaggerGen(options =>
                 {
-                    c.SwaggerDoc("v1", new OpenApiInfo { Title = "MrRooster.Payments", Version = "v1" });
+                    options.SwaggerDoc("v1", new OpenApiInfo
+                    {
+                        Version = "v1",
+                        Title = "Mr. Rooster - Payments",
+                        Description = "Web API to manage multiple payment methods.",
+                        TermsOfService = new Uri("https://example.com/terms"),
+                        Contact = new OpenApiContact
+                        {
+                            Name = "Example Contact",
+                            Url = new Uri("https://example.com/contact")
+                        },
+                        License = new OpenApiLicense
+                        {
+                            Name = "Example License",
+                            Url = new Uri("https://example.com/license")
+                        }
+                    });
                 });
         }
 
