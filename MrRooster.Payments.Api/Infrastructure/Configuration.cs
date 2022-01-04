@@ -8,7 +8,9 @@ using MrRooster.Payments.Application.Commands.PayPal;
 using System;
 using MediatR;
 using MrRooster.Payments.Api.Configuration.Extensions;
-using MrRooster.Payments.Api.Models.PayPalCreateProduct;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
+using MrRooster.Payments.Api.Features.PayPalCreateProduct;
 
 namespace MrRooster.Payments.Api.Infrastructure
 {
@@ -18,6 +20,11 @@ namespace MrRooster.Payments.Api.Infrastructure
         {
             services
                 .AddControllers()
+                .AddNewtonsoftJson(opt =>
+                        {
+                           opt.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
+                           opt.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
+                  })
                 .AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<PayPalCreateProductRequestValidator>())
                 .Services
                 .AddMediatR(typeof(PayPalCreateProductCommand).Assembly)

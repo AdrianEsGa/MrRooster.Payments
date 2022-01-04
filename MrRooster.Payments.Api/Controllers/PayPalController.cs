@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using MrRooster.Payments.Api.Models.PayPalCreateProduct;
+using MrRooster.Payments.Api.Features.PayPalCreateProduct;
 using MrRooster.Payments.Application.Commands.PayPal;
 using Swashbuckle.AspNetCore.Annotations;
 using System.Threading.Tasks;
@@ -19,9 +19,10 @@ namespace MrRooster.Payments.Api.Controllers
         private IMediator Mediator { get; set; }
         private IMapper Mapper { get; set; }
 
-        public PayPalController(IMediator mediator)
+        public PayPalController(IMediator mediator, IMapper mapper)
         {
             Mediator = mediator;
+            Mapper = mapper;
         }
 
         /// <summary>

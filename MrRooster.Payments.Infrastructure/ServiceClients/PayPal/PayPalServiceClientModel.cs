@@ -1,30 +1,86 @@
-﻿using System.Text.Json.Serialization;
-
+﻿using Newtonsoft.Json;
+using System;
+using System.Collections.Generic;
 
 namespace MrRooster.Payments.Infrastructure.ServiceClients.PayPal
 {
+
+    public static class PayPalEndpoints
+    {
+        public static string GET_TOKEN = "v1/oauth2/token";
+        public static string CREATE_PRODUCT = "v1/catalogs/products";
+    }
+
     public class PayPalProduct
     {
-        [JsonPropertyName("name")]
+        [JsonProperty("name")]
         public string Name;
 
-        [JsonPropertyName("description")]
+        [JsonProperty("description")]
         public string Description;
 
-        [JsonPropertyName("type")]
+        [JsonProperty("type")]
         public string Type;
 
-        [JsonPropertyName("category")]
+        [JsonProperty("category")]
         public string Category;
 
-        [JsonPropertyName("image_url")]
+        [JsonProperty("image_url")]
         public string ImageUrl;
 
-        [JsonPropertyName("home_url")]
+        [JsonProperty("home_url")]
         public string HomeUrl;
     }
 
     public class PayPalProductCreated
     {
+        [JsonProperty("id")]
+        public string Id;
+
+        [JsonProperty("name")]
+        public string Name;
+
+        [JsonProperty("description")]
+        public string Description;
+
+        [JsonProperty("create_time")]
+        public DateTime CreateTime;
+
+        [JsonProperty("links")]
+        public List<Link> Links;
     }
+
+    public class PayPalOAuth
+    {
+        [JsonProperty("scope")]
+        public string Scope;
+
+        [JsonProperty("access_token")]
+        public string AccessToken;
+
+        [JsonProperty("token_type")]
+        public string TokenType;
+
+        [JsonProperty("app_id")]
+        public string AppId;
+
+        [JsonProperty("expires_in")]
+        public int ExpiresIn;
+
+        [JsonProperty("nonce")]
+        public string Nonce;
+    }
+
+    public class Link
+    {
+        [JsonProperty("href")]
+        public string Href;
+
+        [JsonProperty("rel")]
+        public string Rel;
+
+        [JsonProperty("method")]
+        public string Method;
+    }
+
 }

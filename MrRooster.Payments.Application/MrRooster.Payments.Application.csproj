@@ -5,18 +5,16 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Queries\**" />
-    <EmbeddedResource Remove="Queries\**" />
-    <None Remove="Queries\**" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\MrRooster.Payments.Domain\MrRooster.Payments.Domain.csproj" />
     <ProjectReference Include="..\MrRooster.Payments.Infrastructure\MrRooster.Payments.Infrastructure.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="MediatR" Version="9.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Queries\" />
   </ItemGroup>
 
 </Project>
