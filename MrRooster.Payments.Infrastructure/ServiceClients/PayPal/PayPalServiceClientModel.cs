@@ -13,6 +13,9 @@ namespace MrRooster.Payments.Infrastructure.ServiceClients.PayPal
 
     public class PayPalProduct
     {
+        [JsonProperty("id")]
+        public string Id;
+
         [JsonProperty("name")]
         public string Name;
 
@@ -30,25 +33,18 @@ namespace MrRooster.Payments.Infrastructure.ServiceClients.PayPal
 
         [JsonProperty("home_url")]
         public string HomeUrl;
-    }
-
-    public class PayPalProductCreated
-    {
-        [JsonProperty("id")]
-        public string Id;
-
-        [JsonProperty("name")]
-        public string Name;
-
-        [JsonProperty("description")]
-        public string Description;
 
         [JsonProperty("create_time")]
         public DateTime CreateTime;
 
+        [JsonProperty("update_time")]
+        public DateTime UpdateTime;
+
         [JsonProperty("links")]
-        public List<Link> Links;
+        public List<PayPalLink> Links;
     }
+
+
 
     public class PayPalOAuth
     {
@@ -71,7 +67,7 @@ namespace MrRooster.Payments.Infrastructure.ServiceClients.PayPal
         public string Nonce;
     }
 
-    public class Link
+    public class PayPalLink
     {
         [JsonProperty("href")]
         public string Href;

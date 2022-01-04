@@ -3,13 +3,11 @@ using System.ComponentModel.DataAnnotations;
 
 namespace MrRooster.Payments.Api.Features.PayPalCreateProduct
 {
-    public class PayPalCreateProductRequest
+    public class PayPalCreateProductResponse
     {
 
         [Required]
-        public string Name;
-
-        public string Description;
+        public string productId;
 
     }
 }

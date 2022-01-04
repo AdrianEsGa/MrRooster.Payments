@@ -10,8 +10,9 @@ namespace MrRooster.Payments.Api.Features.PayPalCreateProduct
         {
             CreateMap<PayPalCreateProductRequest, PayPalCreateProductCommand>()
                 .ForMember(dest => dest.PayPalProduct,
-                           opt => opt.MapFrom(src => new PayPalProduct { Name = src.Name, Description = src.Description, Type = src.Type, Category = src.Category }));
+                           opt => opt.MapFrom(src => new PayPalProduct { Name = src.Name, Description = src.Description, Type = "SERVICE", Category = "SOFTWARE" }));
 
+            CreateMap<PayPalProduct, PayPalCreateProductResponse>().ForMember(dest => dest.productId, opt => opt.MapFrom(src => src.Id));
 
         }
     }

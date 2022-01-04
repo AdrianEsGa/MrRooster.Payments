@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 namespace MrRooster.Payments.Application.Commands.PayPal
 {
 
-    public class PayPalCreateProductCommand : IRequest<PayPalProductCreated>
+    public class PayPalCreateProductCommand : IRequest<PayPalProduct>
     {
         public PayPalProduct PayPalProduct { get; set; }
     }
 
-    public class PayPalCreateProductCommandHandler : IRequestHandler<PayPalCreateProductCommand, PayPalProductCreated>
+    public class PayPalCreateProductCommandHandler : IRequestHandler<PayPalCreateProductCommand, PayPalProduct>
     {
         private readonly IPayPalServiceClient _payPalServiceClient;
 
@@ -21,10 +21,9 @@ namespace MrRooster.Payments.Application.Commands.PayPal
             _payPalServiceClient = payPalServiceClient;
         }
 
-        public async Task<PayPalProductCreated> Handle(PayPalCreateProductCommand request, CancellationToken cancellationToken)
+        public async Task<PayPalProduct> Handle(PayPalCreateProductCommand request, CancellationToken cancellationToken)
         {
-            var productCreated = await _payPalServiceClient.CreateProduct(request.PayPalProduct);
-            return productCreated;
+            return await _payPalServiceClient.CreateProduct(request.PayPalProduct);
         }
     }
 }

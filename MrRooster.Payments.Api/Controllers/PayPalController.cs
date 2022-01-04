@@ -32,12 +32,13 @@ namespace MrRooster.Payments.Api.Controllers
         /// Create a PayPal product
         /// </remarks>
         /// <param name="product">ID of the example</param>
-        [HttpPost("/products")]
-        public async Task<ActionResult> CreateProduct([FromBody] PayPalCreateProductRequest request)
+        [HttpPost("/paypal/products")]
+        public async Task<ActionResult<PayPalCreateProductResponse>> CreateProduct([FromBody] PayPalCreateProductRequest request)
         {
             var command = Mapper.Map<PayPalCreateProductCommand>(request);
-            var response = await Mediator.Send(command);
-            return Ok();
+            var result = await Mediator.Send(command);
+            var response = Mapper.Map<PayPalCreateProductResponse>(result);
+            return Ok(response);
         }
 
     }

@@ -28,7 +28,7 @@ namespace MrRooster.Payments.Infrastructure.ServiceClients.PayPal
             PayPalSecret = configuration[nameof(PayPalSecret)];
         }
 
-        public async Task<PayPalProductCreated> CreateProduct(PayPalProduct product)
+        public async Task<PayPalProduct> CreateProduct(PayPalProduct product)
         {
             var oauth = await GetOAuth();
             var path = string.Concat(_httpClient.BaseAddress, PayPalEndpoints.CREATE_PRODUCT);
@@ -44,7 +44,7 @@ namespace MrRooster.Payments.Infrastructure.ServiceClients.PayPal
             {
                 _logger.LogInformation("Product created!!");
                 var json = response.Content.ReadAsStringAsync().Result;
-                return JsonConvert.DeserializeObject<PayPalProductCreated>(json);
+                return JsonConvert.DeserializeObject<PayPalProduct>(json);
             }
             else
             {

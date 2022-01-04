@@ -5,6 +5,6 @@ namespace MrRooster.Payments.Infrastructure.Abstractions
 {
     public interface IPayPalServiceClient
     {
-        Task<PayPalProductCreated> CreateProduct(PayPalProduct product);
+        Task<PayPalProduct> CreateProduct(PayPalProduct product);
     }
 }
