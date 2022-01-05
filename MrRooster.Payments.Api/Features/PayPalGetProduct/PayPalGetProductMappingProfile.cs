@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using MrRooster.Payments.Application.Queries.PayPal;
+using MrRooster.Payments.Application.Queries;
 using MrRooster.Payments.Infrastructure.ServiceClients.PayPal;
 
 namespace MrRooster.Payments.Api.Features.PayPalGetProduct

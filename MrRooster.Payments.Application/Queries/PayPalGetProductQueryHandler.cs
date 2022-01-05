@@ -4,7 +4,7 @@ using MrRooster.Payments.Infrastructure.ServiceClients.PayPal;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace MrRooster.Payments.Application.Queries.PayPal
+namespace MrRooster.Payments.Application.Queries
 {
 
     public class PayPalGetProductQuery : IRequest<PayPalProduct>

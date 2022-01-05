@@ -31,7 +31,7 @@ namespace MrRooster.Payments.Infrastructure.ServiceClients.PayPal
         public async Task<PayPalProduct> CreateProduct(PayPalProduct product)
         {
             var oauth = await GetOAuth();
-            var path = string.Concat(_httpClient.BaseAddress, PayPalEndpoints.CREATE_PRODUCT);
+            var path = string.Concat(_httpClient.BaseAddress, PayPalEndpoints.Products.CREATE_PRODUCT);
 
             _httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
             _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue(oauth.TokenType, oauth.AccessToken);
@@ -40,14 +40,16 @@ namespace MrRooster.Payments.Infrastructure.ServiceClients.PayPal
 
             var response = await _httpClient.PostAsync(path, content);
 
+            var json = response.Content.ReadAsStringAsync().Result;
+
             if (response.IsSuccessStatusCode)
             {
-                _logger.LogInformation("Product created!!");
-                var json = response.Content.ReadAsStringAsync().Result;
+                _logger.LogInformation("Product created!!");     
                 return JsonConvert.DeserializeObject<PayPalProduct>(json);
             }
             else
             {
+                _logger.LogError(json);
                 throw new Exception();
             }
         }
@@ -55,19 +57,47 @@ namespace MrRooster.Payments.Infrastructure.ServiceClients.PayPal
         public async Task<PayPalProduct> GetProduct(string productId)
         {
             var oauth = await GetOAuth();
-            var path = _httpClient.BaseAddress + PayPalEndpoints.GET_PRODUCT + productId;
+            var path = _httpClient.BaseAddress + PayPalEndpoints.Products.GET_PRODUCT + productId;
 
             _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue(oauth.TokenType, oauth.AccessToken);
 
             var response = await _httpClient.GetAsync(path);
 
+            var json = response.Content.ReadAsStringAsync().Result;
+
             if (response.IsSuccessStatusCode)
-            {
-                var json = response.Content.ReadAsStringAsync().Result;
+            {          
                 return JsonConvert.DeserializeObject<PayPalProduct>(json);
             }
             else
             {
+                _logger.LogError(json);
+                throw new Exception();
+            }
+        }
+
+        public async Task<PayPalPlan> CreatePlan(PayPalPlan plan)
+        {
+            var oauth = await GetOAuth();
+            var path = string.Concat(_httpClient.BaseAddress, PayPalEndpoints.Plans.CREATE_PLAN);
+
+            _httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+            _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue(oauth.TokenType, oauth.AccessToken);
+
+            var content = new StringContent(JsonConvert.SerializeObject(plan), Encoding.UTF8, "application/json");
+
+            var response = await _httpClient.PostAsync(path, content);
+
+            var json = response.Content.ReadAsStringAsync().Result;
+
+            if (response.IsSuccessStatusCode)
+            {
+                _logger.LogInformation("Plan created!!");            
+                return JsonConvert.DeserializeObject<PayPalPlan>(json);
+            }
+            else
+            {
+                _logger.LogError(json);
                 throw new Exception();
             }
         }

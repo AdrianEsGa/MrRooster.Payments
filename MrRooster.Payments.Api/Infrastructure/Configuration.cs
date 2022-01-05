@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Routing;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using MrRooster.Payments.Application.Commands.PayPal;
+using MrRooster.Payments.Application.Commands;
 using System;
 using MediatR;
 using MrRooster.Payments.Api.Configuration.Extensions;

@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using MrRooster.Payments.Api.Features.PayPalCreatePlan;
 using MrRooster.Payments.Api.Features.PayPalCreateProduct;
 using MrRooster.Payments.Api.Features.PayPalGetProduct;
 using MrRooster.Payments.Infrastructure.Abstractions;
@@ -18,6 +19,7 @@ namespace MrRooster.Payments.Api.Configuration.Extensions
             {
                 cfg.AddProfile(new PayPalCreateProductMappingProfile());
                 cfg.AddProfile(new PayPalGetProductMappingProfile());
+                cfg.AddProfile(new PayPalCreatePlanMappingProfile());
 
             }).CreateMapper());
 

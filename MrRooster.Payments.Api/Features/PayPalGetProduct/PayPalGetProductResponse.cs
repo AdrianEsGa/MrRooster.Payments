@@ -7,25 +7,25 @@ namespace MrRooster.Payments.Api.Features.PayPalGetProduct
     {
 
         [JsonProperty("id")]
-        public string Id;
+        public string Id { get; set; }
 
         [JsonProperty("name")]
-        public string Name;
+        public string Name { get; set; }
 
         [JsonProperty("description")]
-        public string Description;
+        public string Description { get; set; }
 
         [JsonProperty("type")]
-        public string Type;
+        public string Type { get; set; }
 
         [JsonProperty("category")]
-        public string Category;
+        public string Category { get; set; }
 
         [JsonProperty("create_time")]
-        public DateTime CreateTime;
+        public DateTime CreateTime { get; set; }
 
         [JsonProperty("update_time")]
-        public DateTime UpdateTime;
+        public DateTime UpdateTime { get; set; }
 
     }
 }

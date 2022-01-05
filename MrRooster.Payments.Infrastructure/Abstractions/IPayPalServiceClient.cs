@@ -7,5 +7,6 @@ namespace MrRooster.Payments.Infrastructure.Abstractions
     {
         Task<PayPalProduct> CreateProduct(PayPalProduct product);
         Task<PayPalProduct> GetProduct(string productId);
+        Task<PayPalPlan> CreatePlan(PayPalPlan plan);
     }
 }

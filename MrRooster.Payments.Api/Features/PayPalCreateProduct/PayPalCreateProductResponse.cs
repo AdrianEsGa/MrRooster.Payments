@@ -7,7 +7,7 @@ namespace MrRooster.Payments.Api.Features.PayPalCreateProduct
     {
 
         [Required]
-        public string productId;
+        public string ProductId { get; set; }
 
     }
 }

@@ -4,7 +4,7 @@ using MrRooster.Payments.Infrastructure.ServiceClients.PayPal;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace MrRooster.Payments.Application.Commands.PayPal
+namespace MrRooster.Payments.Application.Commands
 {
 
     public class PayPalCreateProductCommand : IRequest<PayPalProduct>
