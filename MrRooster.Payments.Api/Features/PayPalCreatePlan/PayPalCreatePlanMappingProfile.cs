@@ -16,24 +16,24 @@ namespace MrRooster.Payments.Api.Features.PayPalCreatePlan
                           {
                               ProductId = src.ProductId,
                               Name = src.Name,
-                              Description = src.Description,
                               BillingCycles = new List<PayPalBillingCycle> { new PayPalBillingCycle
                               {
                                   Frequency = new PayPalFrequency { IntervalCount = src.BillingCycle.Frequency.IntervalCount,
                                                                     IntervalUnit = src.BillingCycle.Frequency.IntervalUnit },
                                   TenureType = "REGULAR",
                                   Sequence = 1,
-                                  TotalCycles = src.BillingCycle.TotalCycles,
-                                  PricingScheme = new PayPalPricingScheme { FixedPrice = new PayPalFixedPrice {
-                                                                                                                CurrencyCode = src.BillingCycle.FixedPrice.CurrencyCode,
-                                                                                                                Value = src.BillingCycle.FixedPrice.Value }}
-                              }                         
+                                  TotalCycles = 0, //Infinite cycles
+                                  PricingScheme = new PayPalPricingScheme { FixedPrice = new PayPalFixedPrice 
+                                                                            {
+                                                                                CurrencyCode = "EUR",
+                                                                                Value = src.BillingCycle.FixedPrice.Value }
+                                  }
+                              }
                               },
-                              PaymentPreferences = new PayPalPaymentPreferences { 
-                                                     AutoBillOutstanding = true, 
-                                                     PaymentFailureThreshold = 3, 
-                                                     SetupFee = new PayPalSetupFee { CurrencyCode = "EUR", Value = "21" },
-                                                     SetupFeeFailureAction = "CONTINUE"
+                              PaymentPreferences = new PayPalPaymentPreferences
+                              {
+                                  AutoBillOutstanding = true,
+                                  PaymentFailureThreshold = 3,
                               }
                           }));
 

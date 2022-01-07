@@ -3,6 +3,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using MrRooster.Payments.Api.Features.PayPalCreatePlan;
 using MrRooster.Payments.Api.Features.PayPalCreateProduct;
+using MrRooster.Payments.Api.Features.PayPalCreateSubscription;
 using MrRooster.Payments.Api.Features.PayPalGetProduct;
 using MrRooster.Payments.Infrastructure.Abstractions;
 using MrRooster.Payments.Infrastructure.ServiceClients.PayPal;
@@ -20,6 +21,7 @@ namespace MrRooster.Payments.Api.Configuration.Extensions
                 cfg.AddProfile(new PayPalCreateProductMappingProfile());
                 cfg.AddProfile(new PayPalGetProductMappingProfile());
                 cfg.AddProfile(new PayPalCreatePlanMappingProfile());
+                cfg.AddProfile(new PayPalCreateSubscriptionMappingProfile());
 
             }).CreateMapper());
 

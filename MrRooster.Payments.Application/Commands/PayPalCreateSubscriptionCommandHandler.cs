@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace MrRooster.Payments.Application.Commands
 {
-    public class PayPalCreateSubscriptionCommand : IRequest<PayPalSubscription>
+    public class PayPalCreateSubscriptionCommand : IRequest<PayPalSubscriptionCreated>
     {
         public PayPalSubscription PayPalSubscription { get; set; }
     }
 
-    public class PayPalCreateSubscriptionCommandHandler : IRequestHandler<PayPalCreateSubscriptionCommand, PayPalSubscription>
+    public class PayPalCreateSubscriptionCommandHandler : IRequestHandler<PayPalCreateSubscriptionCommand, PayPalSubscriptionCreated>
     {
         private readonly IPayPalServiceClient _payPalServiceClient;
 
@@ -20,9 +20,9 @@ namespace MrRooster.Payments.Application.Commands
             _payPalServiceClient = payPalServiceClient;
         }
 
-        public Task<PayPalSubscription> Handle(PayPalCreateSubscriptionCommand request, CancellationToken cancellationToken)
+        public async Task<PayPalSubscriptionCreated> Handle(PayPalCreateSubscriptionCommand request, CancellationToken cancellationToken)
         {
-            throw new System.NotImplementedException();
+            return await _payPalServiceClient.CreateSubscription(request.PayPalSubscription);
         }
     }
 }

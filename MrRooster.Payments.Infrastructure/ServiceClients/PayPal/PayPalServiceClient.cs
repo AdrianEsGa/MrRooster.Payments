@@ -102,6 +102,32 @@ namespace MrRooster.Payments.Infrastructure.ServiceClients.PayPal
             }
         }
 
+        public async Task<PayPalSubscriptionCreated> CreateSubscription(PayPalSubscription subscription)
+        {
+            var oauth = await GetOAuth();
+            var path = string.Concat(_httpClient.BaseAddress, PayPalEndpoints.Subscriptions.CREATE_SUBSCRIPTION);
+
+            _httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+            _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue(oauth.TokenType, oauth.AccessToken);
+
+            var content = new StringContent(JsonConvert.SerializeObject(subscription), Encoding.UTF8, "application/json");
+
+            var response = await _httpClient.PostAsync(path, content);
+
+            var json = response.Content.ReadAsStringAsync().Result;
+
+            if (response.IsSuccessStatusCode)
+            {
+                _logger.LogInformation("Subscription created!!");
+                return JsonConvert.DeserializeObject<PayPalSubscriptionCreated>(json);
+            }
+            else
+            {
+                _logger.LogError(json);
+                throw new Exception();
+            }
+        }
+
         private async Task<PayPalOAuth> GetOAuth()
         {
             var path = string.Concat(_httpClient.BaseAddress, PayPalEndpoints.GET_TOKEN);
@@ -124,5 +150,7 @@ namespace MrRooster.Payments.Infrastructure.ServiceClients.PayPal
             throw new Exception(); 
            
         }
+
+
     }
 }

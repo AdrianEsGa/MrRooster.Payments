@@ -260,14 +260,30 @@ namespace MrRooster.Payments.Infrastructure.ServiceClients.PayPal
         public string PlanId { get; set; }
 
         [JsonProperty("start_time")]
-        public DateTime StartTime { get; set; }
+        public DateTime? StartTime { get; set; }
 
         [JsonProperty("subscriber")]
         public Subscriber Subscriber { get; set; }
 
         [JsonProperty("application_context")]
-        public ApplicationContext ApplicationContext { get; set; }
+        public ApplicationContext Context { get; set; }
     }
+
+    public class PayPalSubscriptionCreated
+    {
+        [JsonProperty("status")]
+        public string Status { get; set; }
+
+        [JsonProperty("id")]
+        public string Id { get; set; }
+
+        [JsonProperty("create_time")]
+        public DateTime CreateTime { get; set; }
+
+        [JsonProperty("links")]
+        public List<PayPalLink> Links { get; set; }
+    }
+
 
 
 }

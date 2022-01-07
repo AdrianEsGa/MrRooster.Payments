@@ -14,6 +14,11 @@
         public static class Plans
         {
             public static string CREATE_PLAN = "v1/billing/plans";
-        }     
+        }
+
+        public static class Subscriptions
+        {
+            public static string CREATE_SUBSCRIPTION = "v1/billing/subscriptions";
+        }
     }
 }
