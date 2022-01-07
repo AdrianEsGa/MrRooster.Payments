@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
+using System.IO;
 
 namespace MrRooster.Payments.Host
 {
@@ -14,6 +15,8 @@ namespace MrRooster.Payments.Host
              Microsoft.Extensions.Hosting.Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
+                    webBuilder.UseContentRoot(Directory.GetCurrentDirectory());
+                    webBuilder.UseIISIntegration();
                     webBuilder.UseStartup<Startup>();
                 });
     }
