@@ -1,5 +1,7 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
+using NLog.Web;
 using System.IO;
 
 namespace MrRooster.Payments.Host
@@ -18,6 +20,12 @@ namespace MrRooster.Payments.Host
                     webBuilder.UseContentRoot(Directory.GetCurrentDirectory());
                     webBuilder.UseIISIntegration();
                     webBuilder.UseStartup<Startup>();
-                });
+                })
+               .ConfigureLogging(logging =>
+               {
+                   logging.ClearProviders();
+                   logging.SetMinimumLevel(LogLevel.Trace);
+               })
+              .UseNLog();
     }
 }

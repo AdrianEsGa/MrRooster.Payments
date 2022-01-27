@@ -284,6 +284,4 @@ namespace MrRooster.Payments.Infrastructure.ServiceClients.PayPal
         public List<PayPalLink> Links { get; set; }
     }
 
-
-
 }
