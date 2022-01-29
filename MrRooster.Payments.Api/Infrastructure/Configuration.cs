@@ -29,7 +29,7 @@ namespace MrRooster.Payments.Api.Infrastructure
                 .Services
                 .AddMediatR(typeof(PayPalCreateProductCommand).Assembly)
                 .AddCustomAutoMapper()
-                .AddServiceClients();
+                .AddServiceClients(configuration);
 
             return services;
         }

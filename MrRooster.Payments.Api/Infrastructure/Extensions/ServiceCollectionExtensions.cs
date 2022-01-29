@@ -8,6 +8,7 @@ using MrRooster.Payments.Api.Features.PayPalGetProduct;
 using MrRooster.Payments.Infrastructure.Abstractions;
 using MrRooster.Payments.Infrastructure.ServiceClients.PayPal;
 using System;
+using System.Net.Http.Headers;
 
 namespace MrRooster.Payments.Api.Configuration.Extensions
 {
@@ -26,16 +27,21 @@ namespace MrRooster.Payments.Api.Configuration.Extensions
             }).CreateMapper());
 
 
-        public static IServiceCollection AddServiceClients(this IServiceCollection services)
+        public static IServiceCollection AddServiceClients(this IServiceCollection services, IConfiguration configuration)
         {
-            services
-                .AddHttpClient<IPayPalServiceClient, PayPalServiceClient>()
-                .ConfigureHttpClient((provider, client) =>
-                {
-                    var config = provider.GetRequiredService<IConfiguration>();
-                    client.BaseAddress = new Uri(config["PayPalServiceBaseUrl"]);
-                });
+            var paypalBaseUrl = configuration["PayPalServiceBaseUrl"];
 
+            services.AddHttpClient<IPayPalAuthServiceClient, PayPalAuthServiceClient>(client =>
+            {
+                client.BaseAddress = new Uri(paypalBaseUrl);
+            });
+
+            services.AddHttpClient<IPayPalServiceClient, PayPalServiceClient>(client =>
+            {
+                client.BaseAddress = new Uri(paypalBaseUrl);
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+            });
+               
             return services;
         }
     }
